@@ -23,17 +23,33 @@
 
 .search-name {
     width: 100%;
-    padding: 6px;
-    border-radius: 8px;
-    outline: none;
+    padding: 5px;
+    position: relative;
+    border-color: #24292f;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    cursor: pointer;
+    font-size: 20px;
+    outline: 0;
+    z-index: 1;
 }
 
 .search-type {
     width: 100%;
     padding: 7px;
-    border-radius: 8px;
-    border: 2px solid black;
-    outline: none;
+    position: relative;
+    border-color: #24292f;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    color: #646667;
+    cursor: pointer;
+    font-size: 20px;
+    outline: 0;
+    z-index: 1;
+}
+
+select option:checked {
+    color: #ca1e1e;
 }
 
 .custom-btn {
@@ -45,7 +61,7 @@
     transition: 0.25s ease-in-out;
 
     &:hover {
-        background-color: #3a5066;
+        background-color: #353e45;
         transform: scale(1.05);
     }
 }

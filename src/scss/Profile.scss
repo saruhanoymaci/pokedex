@@ -9,7 +9,6 @@
 
     i {
         font-size: 24px;
-
     }
 
     &:hover {
@@ -20,20 +19,31 @@
 
 .custom-card-2 {
     border: 1px solid rgb(196, 196, 196);
+    color: #ffffffeb;
     margin: 8px 0px;
     padding: 5px 0 25px 0;
     width: 100%;
-    background: linear-gradient(90deg, rgba(199, 145, 223, 1) 0%, rgba(235, 203, 234, 1) 35%, rgba(225, 240, 244, 1) 93%, rgba(189, 230, 238, 1) 100%);
+    background: linear-gradient(220deg, rgba(255, 90, 90, 1) 16%, rgba(35, 49, 57, 1) 68%);
     border-radius: 8px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
         rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
     img {
         margin: 5px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.704);
+        border-radius: 50%;
     }
+
+    .pokemon-name {
+        text-transform: uppercase;
+        font-size: 40px;
+    }
+
 }
 
 h1,
 h3 {
     text-align: center;
+    font-size: 27px;
 }
