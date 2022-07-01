@@ -1,4 +1,4 @@
-import { useLocation, Link, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import "../scss/Profile.scss"
 
 function Profile() {
@@ -14,14 +14,14 @@ function Profile() {
                         <img src={pokemon.img} alt='profile' height={225} />
                     </div>
                     <h1 className="pokemon-name"><b>{pokemon.name}</b></h1> <br />
-                    <h3><b>Height:</b> {pokemon.height}</h3>
-                    <h3><b>Weight:</b> {pokemon.weight}</h3>
-                    <h3><b>Type:</b> {pokemon.type[0]} {pokemon.type[1]}</h3>
-                    <h3><b>Egg: </b>{pokemon.egg}</h3>
-                    <h3><b>Spawn chance:</b> {pokemon.spawn_chance}</h3>
-                    <h3><b>Spawn time:</b> {pokemon.spawn_time}</h3>
+                    <h3><b>Height :</b> {pokemon.height}</h3>
+                    <h3><b>Weight :</b> {pokemon.weight}</h3>
+                    <h3><b>Type :</b> {pokemon.type[0]} {pokemon.type[1]}</h3>
+                    <h3><b>Egg : </b>{pokemon.egg}</h3>
+                    <h3><b>Spawn Chance :</b> {pokemon.spawn_chance}</h3>
+                    <h3><b>Spawn Time :</b> {pokemon.spawn_time}</h3>
                     <h3><b>Weaknesses : </b>{pokemon.weaknesses[0]} {pokemon.weaknesses[1]} {pokemon.weaknesses[2]} {pokemon.weaknesses[3]}</h3>
-                    <h3><b>Average spawns:</b> {pokemon.avg_spawns}</h3>
+                    <h3><b>Average Spawns :</b> {pokemon.avg_spawns}</h3>
                     {pokemon.next_evolution != null ? <h3><b>Next Evolution : </b>{pokemon.next_evolution[0].name} {pokemon.next_evolution[1] ? pokemon.next_evolution[1].name : null}</h3> : <div></div>}
                     {pokemon.prev_evolution != null ? <h3><b>Previous Evolution : </b>{pokemon.prev_evolution[0].name} {pokemon.prev_evolution[1] ? pokemon.prev_evolution[1].name : null}</h3> : <div></div>}
                 </div>

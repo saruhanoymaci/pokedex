@@ -16,6 +16,7 @@ function Home() {
           if (pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())) {
             return (pokemon.name)
           }
+          return false
         }
       )
     )
@@ -27,6 +28,7 @@ function Home() {
           if (pokemon.type[0].toLowerCase().includes(searchType.toLowerCase()) || (pokemon.type[1] != null ? pokemon.type[1].toLowerCase().includes(searchType.toLowerCase()) : null)) {
             return (pokemon.name)
           }
+          return false
         }
       )
     )
