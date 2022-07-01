@@ -1,9 +1,10 @@
 import Logo from "../img/logo.png"
 import { Link } from "react-router-dom"
+import "../scss/Header.scss"
 
-function Headers() {
+function Header() {
     return (
-        <div className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="navbar navbar-expand-lg navbar-dark header-bg">
             <nav className="container d-flex justify-content-between">
                 <Link to="/"> <div className="navbar-brand"><img src={Logo} height={60} alt="logo" /></div></Link>
             </nav>
@@ -11,4 +12,4 @@ function Headers() {
     )
 }
 
-export default Headers
+export default Header

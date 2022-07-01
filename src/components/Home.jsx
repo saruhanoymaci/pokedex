@@ -24,13 +24,14 @@ function Home() {
     return (
       array.filter(
         pokemon => {
-          if (pokemon.type[0].toLowerCase().includes(searchType.toLowerCase())) {
+          if (pokemon.type[0].toLowerCase().includes(searchType.toLowerCase()) || (pokemon.type[1] != null ? pokemon.type[1].toLowerCase().includes(searchType.toLowerCase()) : null)) {
             return (pokemon.name)
           }
         }
       )
     )
   }
+
   return (
     <div className='container'>
       <div className='row '>
@@ -38,8 +39,23 @@ function Home() {
           <input className="search-name" type="search" placeholder="Search name" onChange={e => setSearchTerm(e.target.value)} />
         </div>
         <div className='col-md-6 mt-3'>
-          <input className="search-type" type="search" placeholder="Search type" onChange={e => setsearchType(e.target.value)} />
 
+          <select className='search-type' placeholder="Search type" onChange={e => setsearchType(e.target.value)}>
+            <option value="">All</option>
+            <option value="bug">Bug</option>
+            <option value="electric">Electric</option>
+            <option value="grass">Grass</option>
+            <option value="ground">Ground</option>
+            <option value="fighting">Fighting</option>
+            <option value="fire">Fire</option>
+            <option value="flying">Flying</option>
+            <option value="ice">Ice</option>
+            <option value="poison">Poison</option>
+            <option value="psychic">Psychic</option>
+            <option value="rock">Rock</option>
+            <option value="water">Water</option>
+            <option value="normal">Normal</option>
+          </select>
         </div>
       </div>
       <div className='row py-4'>
@@ -81,7 +97,6 @@ function Home() {
                       weaknesses: pokemon.weaknesses,
                       next_evolution: pokemon.next_evolution,
                       prev_evolution: pokemon.prev_evolution
-
                     }}>
                       <button className='custom-btn'>
                         More..

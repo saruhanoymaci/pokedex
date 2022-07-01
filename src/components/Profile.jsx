@@ -1,16 +1,13 @@
-import { useLocation, Link } from "react-router-dom"
+import { useLocation, Link, useNavigate } from "react-router-dom"
 import "../scss/Profile.scss"
 
 function Profile() {
     const location = useLocation()
     let pokemon = location.state
+    let navigate = useNavigate();
     return (
         <div className='container'>
-            <Link to="/">
-                <button className="back-button"> <i class="fa-solid fa-arrow-left-long"></i></button>
-
-
-            </Link>
+            <button className="back-button" onClick={() => navigate(-1)}> <i class="fa-solid fa-arrow-left-long"></i></button>
             <div className="d-flex justify-content-center">
                 <div className="custom-card-2">
                     <div className="d-flex justify-content-center">
