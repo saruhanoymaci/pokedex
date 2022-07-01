@@ -31,7 +31,7 @@ function Footer() {
     return (
         <div className="footer footer-expand-lg footer-dark footer-bg">
             <div className="container d-flex justify-content-between"><div className="footer-brand">
-                <i class="fa-solid fa-angles-up fa-lg"
+                <i className="fa-solid fa-angles-up fa-lg"
                     onClick={scrollToTop}
                     style={{ display: visible ? 'block' : 'none' }} ></i>
             </div>

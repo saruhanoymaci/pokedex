@@ -10,11 +10,9 @@ function Home() {
   const getData = () => {
     fetch('https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json')
       .then(function (response) {
-        console.log(response)
         return response.json();
       })
       .then(function (myJson) {
-        console.log(myJson);
         setData(myJson.pokemon)
       });
   }
@@ -46,7 +44,6 @@ function Home() {
       )
     )
   }
-
   return (
     <div className='container'>
       <div className='row '>
@@ -129,7 +126,4 @@ function Home() {
     </div>
   )
 }
-
-
-
 export default Home
