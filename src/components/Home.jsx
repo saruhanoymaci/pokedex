@@ -1,13 +1,26 @@
-import React, { useState } from 'react'
-import Pokedex from "../pokedex.json"
+import React, { useState, useEffect } from 'react'
 import "../scss/Home.scss"
 import { Link } from "react-router-dom"
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState('')
   const [searchType, setsearchType] = useState('')
-  const data = Pokedex.pokemon
+  const [data, setData] = useState([]);
 
+  const getData = () => {
+    fetch('https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json')
+      .then(function (response) {
+        console.log(response)
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson);
+        setData(myJson.pokemon)
+      });
+  }
+  useEffect(() => {
+    getData()
+  }, [])
 
   const filteringName = (array) => {
     return (
